@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+}
+
+/* contenedor_contenido */
+.contenedor_contenido{
+    flex: 1;
+}
+
+/* contenedor_plan_estudios */
+.contenedor_plan_estudios{
+    
+}
+
+/* Plan de estudios */
+#plan_estudios {
+    text-align: center;
+    padding: 2em;
+}
+
+/* contenedor_botones */
+.contenedor_botones {
+    text-align: center; 
+    margin-bottom: 1.25em; 
+}
+
+.contenedor_botones button {
+    background-color: #325b76;
+    color: white;
+    border: none;
+    margin: 0 auto; 
+    padding: 0.625em 0.9375em; 
+    cursor: pointer;
+    border-radius: 0.3125em; 
+    margin-right: 0.3125em; 
+    transition: background-color 0.3s ease;
+}
+
+.contenedor_botones button:hover {
+    background-color: #2980b9;
+}
+
+/* Tablas */
+.tabla2, .tabla3, .tabla4, .tabla5, .tabla6 {
+    display: none;
+}
+
+.tablas {
+    width: 80%;
+    max-width: 62.5em; 
+    margin: 0 auto; 
+    border-collapse: collapse;
+}
+.titulo{
+    background-color: #325b76;
+}
+.tablas td, .tablas th {
+    border: 1px solid #ddd;
+    padding: 2em;
+    text-align: center;
+}
+
+.tablas tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tablas tr:hover {
+    background-color: #2980b9;
+}
+
+.tablas th {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+@media screen and (max-width: 37.5em) {
+    .tablas {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
