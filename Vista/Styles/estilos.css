@@ -1,0 +1,156 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #eafdfc;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* Contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+    overflow: hidden;
+}
+
+.carrusel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+} 
+
+.imagenes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+} 
+
+.img{
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
+    height: 576px;
+    width: 1134px;
+    border-radius: 15px ;
+    margin: 5px;
+    object-fit: cover;
+    filter: saturate(175%);
+} 
+
+.texto{
+    overflow: hidden;
+    position: absolute;
+    flex-direction: column;
+    transform: translateY(0px);
+    margin-bottom: 9px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(63, 106, 138, 0.21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.texto h3{
+    text-shadow: 0px 0px 15px black;
+    padding-top: 40px;
+    color: white;
+    font-weight: 300;
+    font-size: 27px;
+}
+.texto p{
+    align-items: center;
+    padding: 20px;
+    color:white;
+    font-size: 0px;
+    font-weight: 300;
+}
+
+.imagenes .texto{
+    width: 600px;
+    height: 100px;
+    transition: 1s;
+}
+
+.imagenes:hover .texto{
+    transition: height 1s, transform 1s, background-color 1s;
+    transform: translateY(-150px);
+    height: 300px;
+    background-color: rgba(63, 106, 138, 0.71);
+}
+
+.imagenes:hover .texto p{
+    transition: font-size 0s .2s linear;
+    font-size: 23px;
+    font-weight: 300;
+    text-shadow: 0px 0px 10px #000000;
+}
+
+.puntos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.puntos p{
+    font-size: 100px;
+    font-weight: 500;
+    margin-top: -50px;
+    color: black;
+
+}
+.puntos .bold{
+    font-weight: 700;
+    margin-left: 10pxs;
+    margin-right: 10px;
+    color: #5E17EB;
+
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    background: #7a9195;
+     /* Fija el menú en la parte superior de la página */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Hace que el menú ocupe todo el ancho de la ventana */
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+
+.menu li a{
+    /*para quitarle por defecto el subrayado */
+    text-decoration: none;
+    color: white;
+    /*padding para que las etras tengan un espaciado uniforme */
+    padding: 20px;
+    display: block;
+    
+}
+.menu li{
+    /*Display block para poner a lo largo cada texto */
+    display: inline-block;
+    margin-left: 70px;
+    margin: 0 20px;
+}
+.menu li a:hover{
+    
+    /*menu li a hover con color es decir pasar el curso tome un color */
+    background: #ef8354;
+
+}
+.menu img{
+    width: 180px;
+    height: 180px;
+    margin-left: 720px;
+    margin-top: -60px;
+    position: absolute;
+}
+
