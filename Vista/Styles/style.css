@@ -14,11 +14,11 @@ body{
 
 /* contenedor_plan_estudios */
 .contenedor_plan_estudios{
-    
+
 }
 
 /* Plan de estudios */
-#plan_estudios {
+.plan_estudios {
     text-align: center;
     padding: 2em;
 }
@@ -30,7 +30,7 @@ body{
 }
 
 .contenedor_botones button {
-    background-color: #325b76;
+    background-color: rgba(63, 106, 138, 0.71);
     color: white;
     border: none;
     margin: 0 auto; 
@@ -42,7 +42,7 @@ body{
 }
 
 .contenedor_botones button:hover {
-    background-color: #2980b9;
+    background-color: #ef8354;
 }
 
 /* Tablas */
@@ -51,17 +51,16 @@ body{
 }
 
 .tablas {
-    width: 80%;
     max-width: 62.5em; 
     margin: 0 auto; 
     border-collapse: collapse;
 }
 .titulo{
-    background-color: #325b76;
+    background-color: rgba(63, 106, 138, 0.71);
 }
 .tablas td, .tablas th {
     border: 1px solid #ddd;
-    padding: 2em;
+    padding: 1em;
     text-align: center;
 }
 
@@ -70,14 +69,8 @@ body{
 }
 
 .tablas tr:hover {
-    background-color: #2980b9;
+    background-color: #ef8354;
 }
-
-.tablas th {
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
 @media screen and (max-width: 37.5em) {
     .tablas {
         display: block;
