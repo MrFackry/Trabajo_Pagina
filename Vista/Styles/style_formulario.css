@@ -1,0 +1,116 @@
+/*
+contenedor_contenido
+*/
+.contenedor_contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+/*
+formulario_h1
+*/
+.formulario_h1{
+    text-align: center;
+    padding-bottom: 2em;
+}
+/*
+formulario
+*/
+.formulario {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.formulario fieldset {
+    border: none;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.formulario legend {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+.campo input[type="text"]:hover,
+.campo input[type="email"]:hover,
+.campo textarea:hover {
+    background-color: #ef8354;
+    transition: background-color 0.3s ease; 
+}
+.campo textarea {
+    resize: vertical;
+}
+
+.campo input[type="radio"] {
+    margin-right: 5px;
+}
+.campo select{
+    width: 10em;
+}
+.botones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.botones input[type="submit"],
+.botones input[type="reset"] {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #333333;
+    color: #ffffff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botones input[type="submit"]:hover
+ {
+    background-color:#ef8354;
+}
+
+.botones input[type="submit"]:active,
+.botones input[type="reset"]:active {
+    transform: scale(0.98);
+}
+
+.botones input[type="reset"] {
+    background-color: #dddddd;
+    color: #333333;
+}
+
+.botones input[type="reset"]:hover {
+    background-color: #ef8354;
+}

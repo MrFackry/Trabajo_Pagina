@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/Trabajo_Pagina/Vista/Styles/estilos.css">
+    <link rel="stylesheet" href="/Trabajo_Pagina/Vista/Styles/style_formulario.css">
 </head>
+
 <body>
-    <h1>FORMULARIO</h1>
+    <h1 class="formulario_h1">FORMULARIO</h1>
     <ul class="menu">
         <li><a href="/Trabajo_Pagina/Vista/DOMS/menu.html">Menu</a></li>
         <li><a href="/Trabajo_Pagina/Vista/DOMS/index.html">Plan de Estudios</a></li>
@@ -15,6 +18,129 @@
         <li><a href="/Trabajo_Pagina/Vista/DOMS/formulario.html">Formulario</a></li>
         <li><a href="/Trabajo_Pagina/Vista/DOMS/perfilOcupacional.html">Perfil Ocupacional</a></li>
     </ul>
-    
+    <div class="contenedor_contenido">
+        <form action="" class="formulario">
+            <fieldset>
+                <legend>Formulario de inscripcion</legend>
+
+                <div class="campo">
+                    <label for="primer_nombre">Primer nombre:</label>
+                    <input type="text" id="primer_nombre" placeholder="Primer nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="segundo_nombre">Segundo nombre:</label>
+                    <input type="text" id="segundo_nombre" placeholder="Segundo nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="primer_apellido">Primer apellido:</label>
+                    <input type="text" id="primer_apellido" placeholder="Primer apellido" required>
+                </div>
+
+                <div class="campo">
+                    <label for="segundo_apellido">Segundo apellido:</label>
+                    <input type="text" id="segundo_apellido" placeholder="Segundo apellido" required>
+                </div>
+
+                <fieldset>
+                    <legend>Correo electronico</legend>
+                    <div class="campo">
+                        <label for="correo">Correo:</label>
+                        <input type="email" id="correo" placeholder="Tu correo electrónico" required>
+                    </div>
+                </fieldset>
+            </fieldset>
+
+            <fieldset>
+                <legend>Numero de contacto</legend>
+                <div class="campo">
+                    <label for="correo">Numero:</label>
+                    <input type="text" id="numero" placeholder="Tu numero de contacto" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Programa</legend>
+                <div class="campo">
+                <label for="programa">Seleccione el programa al que pertenece</label>
+                <select name="programa" id="programa">
+                    <option value="none">Selecionar</option>
+                    <option value="administracion_agroindustrial">Administración Agroindustrial</option>
+                    <option value="administracion_comercial_financiera">Administración Comercial y Financiera</option>
+                    <option value="administracion_servicios_salud">Administración de Servicios de Salud</option>
+                    <option value="educacion_basica_primaria">Licenciatura en Educación Básica Primaria</option>
+                    <option value="tecnologia_electricidad_industrial">Tecnología en Electricidad Industrial</option>
+                    <option value="tecnologia_gestion_administrativa_salud">Tecnología en Gestión Administrativa de Servicios de Salud</option>
+                    <option value="tecnologia_gestion_agroindustrial">Tecnología en Gestión Agroindustrial</option>
+                    <option value="tecnologia_gestion_comercial_financiera">Tecnología en Gestión Comercial y Financiera</option>
+                    <option value="tecnologia_gestion_produccion_acero">Tecnología en Gestión de Producción y Transformación del Acero</option>
+                    <option value="tecnologia_maquinas_herramientas">Tecnología en Máquinas y Herramientas</option>
+                    <option value="tecnologia_obras_civiles">Tecnología en Obras Civiles</option>
+                    <option value="tecnologia_programacion_sistemas">Tecnología en Programación de Sistemas Informáticos</option>
+                    <option value="tecnologia_regencia_farmacia">Tecnología en Regencia de Farmacia</option>
+                    <option value="tecnologia_telematica">Tecnología en Telemática</option>
+                    <option value="tecnica_redes_computadores">Técnica Profesional en Instalación y Mantenimiento de Redes y Computadores</option>
+                    <option value="tecnico_administrativos_salud">Técnico Profesional en Procesos Administrativos de Salud</option>
+                    <option value="tecnico_procesos_agroindustriales">Técnico Profesional en Procesos Agroindustriales</option>
+                    <option value="tecnico_procesos_comerciales_financieros">Técnico Profesional en Procesos Comerciales y Financieros</option>
+                    <option value="tecnico_produccion_acero">Técnico Profesional en Producción y Transformación del Acero</option>
+                </select>
+                </div>
+            </fieldset>
+            <div class="botones">
+                <input type="submit" value="Enviar" id="button1">
+                <input type="reset" value="Cancelar" id="button2">
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-link">
+                    <h4>Universidad</h4>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nuestra comunidad</a></li>
+                        <li><a href="#">Política</a></li>
+                        <li><a href="#">Matricúlate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-link">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Preguntas</a></li>
+                        <li><a href="#">Manual educativo</a></li>
+                        <li><a href="#">Docentes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-link">
+                    <h4>Sedes</h4>
+                    <ul>
+                        <li><a href="#">Sogamoso</a></li>
+                        <li><a href="#">Duitama</a></li>
+                        <li><a href="#">Tunja</a></li>
+                        <li><a href="#">Chiquiquira</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-link">
+                    <h4>Siguenos</h4>
+                    <div class="social-link">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instragram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-lindkedin"></i></a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/Trabajo_Pagina/Logica/formulario.js"></script>
 </body>
+
 </html>

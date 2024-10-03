@@ -9,13 +9,13 @@ contenedor_contenido
 .contenedor_contenido{
     flex: 1;
     flex-direction: column;
-    padding-top: 5em;
+    padding: 5em;
 }
 /*
 Grupo_investigacion
 */
 .grupo_investigacion{
-    margin-bottom: 1.25em;
+    padding-bottom: 2em;
 }
 .grupos_investigacion{
     text-align: center;

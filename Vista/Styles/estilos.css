@@ -22,7 +22,7 @@ body {
 .menu {
     list-style: none;
     padding: 0;
-    background: #7a9195;
+    background: rgba(63, 106, 138, 0.71);
     position: fixed;
     top: 0;
     left: 0;
@@ -48,6 +48,7 @@ body {
 
 .menu li a:hover {
     background: #ef8354;
+    transition: background-color 0.3s ease; 
 }
 
 /* Ajuste de imagen del menú */

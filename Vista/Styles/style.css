@@ -11,6 +11,7 @@ body{
 /* contenedor_contenido */
 .contenedor_contenido{
     flex: 1;
+    padding: 5em;
 }
 
 /* contenedor_plan_estudios */
@@ -21,7 +22,7 @@ body{
 /* Plan de estudios */
 .plan_estudios {
     text-align: center;
-    padding: 2em;
+    padding-bottom: 2em;
 }
 
 /* contenedor_botones */
@@ -44,6 +45,7 @@ body{
 
 .contenedor_botones button:hover {
     background-color: #ef8354;
+    transition: background-color 0.3s ease; 
 }
 
 /* Tablas */
@@ -69,7 +71,6 @@ body{
 }
 .tablas td summary:hover{
     cursor:url(/Trabajo_Pagina/Vista/imagenes/pngwing.com.png),auto;
-    
 }
 .tablas tr:nth-child(even) {
     background-color: #f2f2f2;
@@ -77,6 +78,7 @@ body{
 
 .tablas tr:hover {
     background-color: #ef8354;
+    transition: background-color 0.3s ease; 
 }
 @media screen and (max-width: 37.5em) {
     .tablas {
