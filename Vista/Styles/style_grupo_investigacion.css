@@ -1,12 +1,15 @@
 *{
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 /*
 contenedor_contenido
 */
 .contenedor_contenido{
     flex: 1;
+    flex-direction: column;
+    padding-top: 5em;
 }
 /*
 Grupo_investigacion
@@ -27,16 +30,25 @@ contenedor_grupos
 /*
 grid
 */
-.parent { 
+.contenedor_grupos {
+    display: flex; 
+    justify-content: center; 
+    padding: 2em 0; 
+}
+
+.parent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: 25px;
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .card {
     width: 300px;
     height: 500px;
     perspective: 1000px; /* Añadir perspectiva para el efecto 3D */
+    z-index: 1;
 }
 
 .card-inner {
@@ -58,6 +70,7 @@ grid
     align-items: center;
     background-color: rgba(63, 106, 138, 0.71);
     color: white;
+    border-radius: 12%;
 }
 
 .card-front {
@@ -66,19 +79,30 @@ grid
 
 .card-back {
     transform: rotateY(180deg); 
+    background-color: #ef8354;
 }
 .card-back h1{
     padding-bottom: 1em;
 }
 .card-back p{
-    padding: 1em;
+    padding: 2em;
+    max-height: 150px;
+    overflow-y: auto;
 }
+
 .card-back a{
     text-decoration: none;
     color: white;
 }
 .card-back a:hover{
-    color:#ef8354;
+    color: black;
+    cursor: url(/Trabajo_Pagina/Vista/imagenes/pngwing.com.png),auto;
+}
+.card-back summary{
+    text-decoration: underline;
+}
+.card-back summary:hover{
+    cursor: url(/Trabajo_Pagina/Vista/imagenes/pngwing.com.png),auto;
 }
 .card:hover .card-inner {
     transform: rotateY(180deg); 
@@ -89,4 +113,14 @@ grid
     height: 200px;
     border-radius: 10%;
     margin-bottom: 10px; 
+}
+
+@media screen and (max-width: 37.5em){
+    .parent{
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .card {
+        max-width: 100%;
+    }
 }

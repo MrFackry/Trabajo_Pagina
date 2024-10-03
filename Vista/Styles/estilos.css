@@ -1,59 +1,103 @@
-*{
+/* Global */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-   
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
     background-color: #eafdfc;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    /* Contenedor */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 70px;
-    overflow: hidden;
+    /* Ajustar el contenido para que no quede debajo del menú fijo */
+    padding-top: 100px; /* Ajustar según la altura del menú */
+    overflow-x: hidden;
 }
 
-.carrusel{
+/* Menú fijo en la parte superior */
+.menu {
+    list-style: none;
+    padding: 0;
+    background: #7a9195;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: flex-start;
+    z-index: 1000; /* Asegurar que el menú esté por encima del contenido */
+}
+
+/* Elementos del menú */
+.menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+    font-size: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    margin-left: 70px;
+    margin: 0 20px;
+}
+
+.menu li a:hover {
+    background: #ef8354;
+}
+
+/* Ajuste de imagen del menú */
+.menu img {
+    width: 180px;
+    height: 180px;
+    margin-left: 720px;
+    margin-top: -60px;
+    position: absolute;
+}
+
+/* Carrusel */
+.carrusel {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
-} 
+    height: calc(70vh - 100px); /* Ajustar la altura del carrusel menos el menú */
+}
 
-.imagenes{
+/* Contenido de imágenes en el carrusel */
+.imagenes {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: end;
-} 
+    position: relative;
+    width: 55em;
+}
 
-.img{
+/* Estilo de las imágenes */
+.img {
+    width: 720px;  /* Establece el ancho fijo */
+    height: 400px; /* Establece la altura fija */
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
-    height: 576px;
-    width: 1134px;
-    border-radius: 15px ;
+    border-radius: 15px;
     margin: 5px;
-    object-fit: cover;
+    object-fit: cover; /* Ajusta la imagen para cubrir el área */
     filter: saturate(175%);
-} 
+}
 
-.texto{
+
+/* Texto superpuesto en las imágenes */
+.texto {
     overflow: hidden;
     position: absolute;
     flex-direction: column;
     transform: translateY(0px);
-    margin-bottom: 9px;
+    margin-bottom: 5px;
     backdrop-filter: blur(20px);
     background-color: rgba(63, 106, 138, 0.21);
     display: flex;
@@ -62,151 +106,114 @@ body{
     border-radius: 30px;
 }
 
-.texto h3{
+.texto h3 {
     text-shadow: 0px 0px 15px black;
     padding-top: 40px;
     color: white;
     font-weight: 300;
     font-size: 27px;
 }
-.texto p{
+
+.texto p {
     align-items: center;
     padding: 20px;
-    color:white;
+    color: white;
     font-size: 0px;
     font-weight: 300;
 }
 
-.imagenes .texto{
+.imagenes .texto {
     width: 600px;
     height: 100px;
     transition: 1s;
 }
 
-.imagenes:hover .texto{
+.imagenes:hover .texto {
     transition: height 1s, transform 1s, background-color 1s;
-    transform: translateY(-150px);
+    transform: translateY(-55px);
     height: 300px;
     background-color: rgba(63, 106, 138, 0.71);
 }
 
-.imagenes:hover .texto p{
+.imagenes:hover .texto p {
     transition: font-size 0s .2s linear;
     font-size: 23px;
     font-weight: 300;
     text-shadow: 0px 0px 10px #000000;
 }
 
-.puntos{
+/* Puntos */
+.puntos {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-.puntos p{
+
+.puntos p {
     font-size: 100px;
     font-weight: 500;
     margin-top: -50px;
     color: black;
-
 }
-.puntos .bold{
+
+.puntos .bold {
     font-weight: 700;
-    margin-left: 10pxs;
+    margin-left: 10px;
     margin-right: 10px;
     color: #5E17EB;
-
 }
 
-.menu {
-    list-style: none;
-    padding: 0;
-    background: #7a9195;
-     /* Fija el menú en la parte superior de la página */
-    position: fixed;
-    top: 0;
-    left: 0;
-    /* Hace que el menú ocupe todo el ancho de la ventana */
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-
-.menu li a{
-    /*para quitarle por defecto el subrayado */
-    text-decoration: none;
-    color: white;
-    /*padding para que las etras tengan un espaciado uniforme */
-    padding: 20px;
-    display: block;
-    font-size: 20px;
-}
-.menu li{
-    /*Display block para poner a lo largo cada texto */
-    display: inline-block;
-    margin-left: 70px;
-    margin: 0 20px;
-}
-.menu li a:hover{
-    
-    /*menu li a hover con color es decir pasar el curso tome un color */
-    background: #ef8354;
-
-}
-.menu img{
-    width: 180px;
-    height: 180px;
-    margin-left: 720px;
-    margin-top: -60px;
-    position: absolute;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
+/* Footer */
 .footer {
     background-color: rgba(63, 106, 138, 0.71);
-    padding: 80px 0;
+    padding: 50px 20px;
     width: 100%;
 }
 
 .footer-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Ajusta el espacio entre columnas */
+    justify-content: space-evenly; /* Distribuye las columnas de manera uniforme */
+    gap: 10px; /* Reduce el espacio entre columnas */
 }
 
-.footer-links {
-    width: 23%; /* Ajusta el ancho para crear más espacio entre columnas */
-    padding: 20px; /* Aumenta el padding para más espacio interno */
+.footer-link {
+    width: 22%;
+    max-width: 300px;
+    min-width: 200px;
+    padding: 20px; /* Espaciado interno para los bloques de cada columna */
 }
 
 .footer-link h4 {
-    font-size: 20px;
-    margin-bottom: 25px; /* Añade espacio debajo del título */
+    font-size: 18px;
+    margin-bottom: 15px;
     color: #fff;
-    font-weight: 500; /* Para que no s evea gruesa la letra*/
-    border-bottom: 2px solid #246a80;
-    padding-bottom: 10px;
-    display: inline-block;
+    font-weight: 400;
+    border-bottom: 1px solid #246a80;
+    padding-bottom: 8px;
+}
+
+.footer-link ul {
+    padding-left: 0; /* Elimina cualquier padding en las listas */
+}
+
+.footer-link ul li {
+    margin-bottom: 10px; /* Añade espacio entre los elementos de la lista */
 }
 
 .footer-link ul li a {
-   font-size: 18px;
-   text-decoration: none;
+   font-size: 16px;
    color: #BBBBBB;
-   display: block;
-   margin-bottom: 15px;
-   transition: all .3s ease; /* Animacion*/
-   font-size: 20px;
+   transition: all .3s ease;
+   text-decoration: none;
 }
-.footer-link ul li a:hover {
-    color: #eafdfc; /* Para cuando pasemos el cursor marque blanco*/
-    padding-left: 6px;
 
- }
-.social-link a{
+.footer-link ul li a:hover {
+    color: #eafdfc;
+    padding-left: 4px;
+}
+
+.social-link a {
     display: inline-block;
     max-width: 40px;
     width: 40px;
@@ -217,11 +224,8 @@ body{
     border-radius: 50%;
     color: #eafdfc;
     transition: all .5s ease;
-
-
-}
-.social-link a:hover{
-    background-color: cornflowerblue
-
 }
 
+.social-link a:hover {
+    background-color: cornflowerblue;
+}
