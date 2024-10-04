@@ -3,6 +3,10 @@
     padding: 0%;
     box-sizing: border-box;
 }
+body{
+    display: flex;
+    flex-direction: column;
+}
 /*
 contenedor_contenido
 */
@@ -68,7 +72,7 @@ grid
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(63, 106, 138, 0.71);
+    background-color: rgba(63, 106, 138);
     color: white;
     border-radius: 12%;
 }
@@ -88,6 +92,7 @@ grid
     padding: 2em;
     max-height: 150px;
     overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .card-back a{
@@ -112,10 +117,11 @@ grid
     width: 200px;
     height: 200px;
     border-radius: 10%;
-    margin-bottom: 10px; 
+    margin-bottom: 29px; 
+    filter: drop-shadow(1px 2px 20px black);
 }
 
-@media screen and (max-width: 37.5em){
+@media screen and (max-width: 600px){
     .parent{
         grid-template-columns: 1fr;
         gap: 16px;

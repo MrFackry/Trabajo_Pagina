@@ -1,3 +1,12 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
 /*
 contenedor_contenido
 */
@@ -6,24 +15,38 @@ contenedor_contenido
     justify-content: center;
     align-items: center;
     padding: 20px;
+    flex: 1;
+    flex-direction: column;
+    padding: 2em;
 }
 /*
 formulario_h1
 */
 .formulario_h1{
     text-align: center;
+    padding-top: 4em;
     padding-bottom: 2em;
+    font-size: 1.5em;
 }
 /*
 formulario
 */
 .formulario {
     width: 100%;
-    max-width: 500px;
+    max-width: 1000px;
     background-color: #ffffff;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 20px; 
+    box-sizing: border-box;
+}
+
+.columna {
+    width: 48%; 
 }
 .formulario fieldset {
     border: none;
@@ -62,9 +85,16 @@ formulario
 }
 .campo input[type="text"]:hover,
 .campo input[type="email"]:hover,
-.campo textarea:hover {
+.campo textarea,
+.campo select:hover {
     background-color: #ef8354;
-    transition: background-color 0.3s ease; 
+    border-color: #ef8354;
+    color: #ffffff;
+}
+.campo select:focus {
+    outline: none;
+    border-color: #ef8354;
+    box-shadow: 0 0 5px rgba(239, 131, 84, 0.5);
 }
 .campo textarea {
     resize: vertical;
@@ -73,14 +103,28 @@ formulario
 .campo input[type="radio"] {
     margin-right: 5px;
 }
-.campo select{
-    width: 10em;
+.campo select {
+    width: 25em;
+    height: 3em;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333333;
+    background-color: #f9f9f9;
+    padding: 0 12px;
+    border: 2px solid #cccccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
 }
+
 .botones {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
+    width: 100%;
 }
 
 .botones input[type="submit"],
@@ -96,9 +140,8 @@ formulario
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.botones input[type="submit"]:hover
- {
-    background-color:#ef8354;
+.botones input[type="submit"]:hover {
+    background-color: #ef8354;
 }
 
 .botones input[type="submit"]:active,

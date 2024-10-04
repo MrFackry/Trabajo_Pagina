@@ -24,7 +24,7 @@ apellido.addEventListener('input', validarApellido);
 segundoApellido.addEventListener('input', validarSegundoApellido);
 correo.addEventListener('input', validarCorreo);
 numero.addEventListener('input', validarNumero);
-
+programa.addEventListener('input', validarPrograma);
 // Funciones de validacion individual
 function validarNombre() {
     if (!expreciones.nombre.test(nombre.value)) {
@@ -73,7 +73,6 @@ function validarNumero() {
         numero.style.border = "3px solid green";
     }
 }
-
 // Evento de envio del formulario
 document.querySelector('form').addEventListener('submit', function(event) {
     if (!validar()) {

@@ -1,6 +1,7 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
 }
 
 body{
@@ -11,6 +12,7 @@ body{
 /* contenedor_contenido */
 .contenedor_contenido{
     flex: 1;
+    flex-direction: column;
     padding: 5em;
 }
 
@@ -23,6 +25,7 @@ body{
 .plan_estudios {
     text-align: center;
     padding-bottom: 2em;
+    font-size: 1.5em;
 }
 
 /* contenedor_botones */
@@ -80,10 +83,13 @@ body{
     background-color: #ef8354;
     transition: background-color 0.3s ease; 
 }
-@media screen and (max-width: 37.5em) {
+@media screen and (max-width: 600px) {
     .tablas {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+    
 }
