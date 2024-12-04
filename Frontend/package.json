@@ -1,0 +1,33 @@
+{
+  "name": "trabajo-final",
+  "version": "1.0.0",
+  "description": "trabajo(GRUPO) final de programacion III",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrFackry/Trabajo_Pagina.git"
+  },
+  "keywords": [
+    "programacion",
+    "grupo",
+    "trabajo-final"
+  ],
+  "author": "Daniel Arcos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrFackry/Trabajo_Pagina/issues"
+  },
+  "homepage": "https://github.com/MrFackry/Trabajo_Pagina#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "supertest": "^7.0.0"
+  }
+}

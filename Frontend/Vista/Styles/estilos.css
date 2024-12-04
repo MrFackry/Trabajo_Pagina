@@ -1,0 +1,239 @@
+/* Global */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #eafdfc;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Ajustar el contenido para que no quede debajo del menú fijo */
+    padding-top: 100px; /* Ajustar según la altura del menú */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+/*contenedor_contenido*/
+.contenedor_contenido{
+    flex: 1;
+    flex-direction: column;
+    padding: 5em;
+}
+/* Menú fijo en la parte superior */
+.menu {
+    list-style: none;
+    padding: 0;
+    background: rgba(63, 106, 138);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: flex-start;
+    z-index: 1000; /* Asegurar que el menú esté por encima del contenido */
+}
+
+/* Elementos del menú */
+.menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+    font-size: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    margin-left: 70px;
+    margin: 0 20px;
+}
+
+.menu li a:hover {
+    background: #ef8354;
+    transition: background-color 0.3s ease; 
+}
+
+/* Ajuste de imagen del menú */
+.menu img {
+    width: 180px;
+    height: 180px;
+    margin-left: 720px;
+    margin-top: -60px;
+    position: absolute;
+}
+
+/* Carrusel */
+.carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: calc(70vh - 100px); /* Ajustar la altura del carrusel menos el menú */
+}
+
+/* Contenido de imágenes en el carrusel */
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    width: 55em;
+}
+
+/* Estilo de las imágenes */
+.img {
+    width: 720px;  /* Establece el ancho fijo */
+    height: 400px; /* Establece la altura fija */
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    margin: 5px;
+    object-fit: cover; /* Ajusta la imagen para cubrir el área */
+    filter: saturate(175%);
+}
+
+
+/* Texto superpuesto en las imágenes */
+.texto {
+    overflow: hidden;
+    position: absolute;
+    flex-direction: column;
+    transform: translateY(0px);
+    margin-bottom: 5px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(63, 106, 138, 0.21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.texto h3 {
+    text-shadow: 0px 0px 15px black;
+    padding-top: 40px;
+    color: white;
+    font-weight: 300;
+    font-size: 27px;
+}
+
+.texto p {
+    align-items: center;
+    padding: 20px;
+    color: white;
+    font-size: 0px;
+    font-weight: 300;
+}
+
+.imagenes .texto {
+    width: 600px;
+    height: 100px;
+    transition: 1s;
+}
+
+.imagenes:hover .texto {
+    transition: height 1s, transform 1s, background-color 1s;
+    transform: translateY(-55px);
+    height: 300px;
+    background-color: rgba(63, 106, 138, 0.71);
+}
+
+.imagenes:hover .texto p {
+    transition: font-size 0s .2s linear;
+    font-size: 23px;
+    font-weight: 300;
+    text-shadow: 0px 0px 10px #000000;
+}
+
+/* Puntos */
+.puntos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.puntos p {
+    font-size: 100px;
+    font-weight: 500;
+    margin-top: -50px;
+    color: black;
+}
+
+.puntos .bold {
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #ef8354;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(63, 106, 138);
+    padding: 50px 20px;
+    width: 100%;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Distribuye las columnas de manera uniforme */
+    gap: 10px; /* Reduce el espacio entre columnas */
+}
+
+.footer-link {
+    width: 22%;
+    max-width: 300px;
+    min-width: 200px;
+    padding: 20px; /* Espaciado interno para los bloques de cada columna */
+}
+
+.footer-link h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 400;
+    border-bottom: 1px solid #246a80;
+    padding-bottom: 8px;
+}
+
+.footer-link ul {
+    padding-left: 0; /* Elimina cualquier padding en las listas */
+}
+
+.footer-link ul li {
+    margin-bottom: 10px; /* Añade espacio entre los elementos de la lista */
+}
+
+.footer-link ul li a {
+   font-size: 16px;
+   color: #BBBBBB;
+   transition: all .3s ease;
+   text-decoration: none;
+}
+
+.footer-link ul li a:hover {
+    color: #eafdfc;
+    padding-left: 4px;
+}
+
+.social-link a {
+    display: inline-block;
+    max-width: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #eafdfc;
+    transition: all .5s ease;
+}
+
+.social-link a:hover {
+    background-color: cornflowerblue;
+}
