@@ -60,22 +60,22 @@
    
 }
 .imagen1{
-    background-image:url(/Trabajo_Pagina/Vista/imagenes/Mision.jpg) ;
+    background-image:url(../imagenes/Mision.jpg) ;
     background-size: cover;
     background-position: center center;
 }
 .imagen2{
-    background-image:url(/Trabajo_Pagina/Vista/imagenes/Vision.png) ;
+    background-image:url(../imagenes/Vision.png) ;
     background-size: cover;
     background-position: center center;
 }
 .imagen3{
-    background-image:url(/Trabajo_Pagina/Vista/imagenes/objetivos.png) ;
+    background-image:url(../imagenes/objetivos.png) ;
     background-size: cover;
     background-position: center center;
 }
 .imagen4{
-    background-image:url(/Trabajo_Pagina/Vista/imagenes/perfilProfesional.png) ;
+    background-image:url(../imagenes/perfilProfesional.png) ;
     background-position: center center;
 }
 

@@ -6,6 +6,7 @@ let segundoApellido = document.getElementById("segundo_apellido");
 let correo = document.getElementById("correo");
 let numero = document.getElementById("numero"); 
 let programa = document.getElementById("programa");
+let grupo = document.getElementById("grupo_Investigacion");
 
 // Expresiones regulares
 const expreciones = {
@@ -25,6 +26,7 @@ segundoApellido.addEventListener('input', validarSegundoApellido);
 correo.addEventListener('input', validarCorreo);
 numero.addEventListener('input', validarNumero);
 programa.addEventListener('input', validarPrograma);
+grupo.addEventListener('input', validarGrupo);
 // Funciones de validacion individual
 function validarNombre() {
     if (!expreciones.nombre.test(nombre.value)) {
@@ -93,7 +95,7 @@ function validar() {
     if (!expreciones.correo.test(correo.value)) esValido = false;
     if (!expreciones.numero.test(numero.value)) esValido = false;
     if (programa.value === "none") esValido = false;
-
+    if (grupo.value === "none") esValido= false;
     return esValido;
 }
 

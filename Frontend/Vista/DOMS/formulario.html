@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/Trabajo_Pagina/Vista/Styles/estilos.css">
-    <link rel="stylesheet" href="/Trabajo_Pagina/Vista/Styles/style_formulario.css">
+    <link rel="stylesheet" href="../Styles/estilos.css">
+    <link rel="stylesheet" href="../Styles/style_formulario.css">
+
 </head>
 
 <body>
     <h1 class="formulario_h1">Formulario</h1>
     <ul class="menu">
-        <li><a href="/Trabajo_Pagina/Vista/DOMS/menu.html">Menu</a></li>
-        <li><a href="/Trabajo_Pagina/index.html">Plan de Estudios</a></li>
-        <li><a href="/Trabajo_Pagina/Vista/DOMS/grupoInvestigacion.html">Grupos de Investigacion</a></li>
-        <li><a href="/Trabajo_Pagina/Vista/DOMS/formulario.html">Formulario</a></li>
-        <li><a href="/Trabajo_Pagina/Vista/DOMS/perfilOcupacional.html">Perfil Ocupacional</a></li>
+        <li><a href="../DOMS/menu.html">Menu</a></li>
+        <li><a href="../../../index.html">Plan de Estudios</a></li>
+        <li><a href="../DOMS/grupoInvestigacion.html">Grupos de Investigacion</a></li>
+        <li><a href="../DOMS/formulario.html">Formulario</a></li>
+        <li><a href="../DOMS/perfilOcupacional.html">Perfil Ocupacional</a></li>
     </ul>
     <div class="contenedor_contenido">
         <form action="" class="formulario">
@@ -83,6 +84,19 @@
                 </select>
                 </div>
             </fieldset>
+            <fieldset>
+                <div class="campo">
+                <legend>Grupo de investigacion</legend>
+                <label for="grupo">Seleccione el Grupo al que inscribirse</label>
+                <select name="grupo" id="grupo_Investigacion">
+                    <option value="none">Selecionar</option>
+                    <option value="TICA">Grupo de investigacion TICA</option>
+                    <option value="TECNO">Grupo de investigacion TECNO</option>
+                    <option value="GIA">Grupo de investigacion GIA</option>
+                </select>
+                </div>
+            </fieldset>
+
             </div>
             <div class="botones">
                 <input type="submit" value="Enviar" id="button1">
@@ -136,7 +150,8 @@
             </div>
         </div>
     </footer>
-    <script src="/Trabajo_Pagina/Logica/formulario.js"></script>
+    <script src="../../Logica/formulario.js"></script>
+
 </body>
 
 </html>

@@ -1,23 +1,22 @@
 let imagenes = [
     {
-        "url": "/Trabajo_Pagina/vista/imagenes/sede.jpg",
+        "url": "../imagenes/sede.jpg", // Ruta relativa desde DOMS a imagenes
         "nombre": "Tecnologia en Programacion",
         "descripcion": "Busca formar profesionales capaces de diseñar, desarrollar, implementar y mantener aplicaciones de software. El plan de estudios suele abarcar una amplia gama de conocimientos y habilidades."
-
     },
     {
-        "url": "/Trabajo_Pagina/vista/imagenes/Programacion.jpg",
+        "url": "../imagenes/Programacion.jpg", // Ruta relativa desde DOMS a imagenes
         "nombre": "Destacando el Futuro de la Tecnología",
         "descripcion": "Sé parte de la revolución tecnológica. Forma parte de una carrera en constante evolución y aprende las habilidades necesarias para construir el futuro de la programación."
-
     },
     {
-        "url": "/Trabajo_Pagina/vista/imagenes/sedeP.jpg",
+        "url": "../imagenes/sedeP.jpg", // Ruta relativa desde DOMS a imagenes
         "nombre": "Un mundo de posibilidades",
-        "descripcion": " La programación te abre las puertas a un sinfín de oportunidades. Desde el desarrollo web hasta la inteligencia artificial, las posibilidades son infinitas."
-
-    },
+        "descripcion": "La programación te abre las puertas a un sinfín de oportunidades. Desde el desarrollo web hasta la inteligencia artificial, las posibilidades son infinitas."
+    }
 ]
+
+
 
 
 let atras = document.getElementById('atras');

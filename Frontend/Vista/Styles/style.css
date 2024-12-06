@@ -73,7 +73,7 @@ body{
     text-decoration: underline;
 }
 .tablas td summary:hover{
-    cursor:url(/Trabajo_Pagina/Vista/imagenes/pngwing.com.png),auto;
+    cursor:url(../imagenes/pngwing.com.png),auto;
 }
 .tablas tr:nth-child(even) {
     background-color: #f2f2f2;
